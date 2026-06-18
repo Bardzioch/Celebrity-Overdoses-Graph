@@ -1,0 +1,16 @@
+id,name,category,is_drug
+Q1033086,combined drug intoxication,przedawkowanie (ogólne),True
+Q1184752,barbiturate overdose,depresant,True
+Q12152,myocardial infarction,inna przyczyna,False
+Q12192,pneumonia,inna przyczyna,False
+Q1255828,controversy,inna przyczyna,False
+Q17154378,opioid overdose,opioid,True
+Q18621601,intoxication,przedawkowanie (ogólne),True
+Q193840,asphyxia,inna przyczyna,False
+Q205972,alcohol intoxication,alkohol,True
+Q21504884,fentanyl toxicity,opioid,True
+Q30100108,heroin overdose,opioid,True
+Q3505252,drug overdose,przedawkowanie (ogólne),True
+Q387175,poisoning by drugs,przedawkowanie (ogólne),True
+Q506616,drowning,inna przyczyna,False
+Q5445,anemia,inna przyczyna,False

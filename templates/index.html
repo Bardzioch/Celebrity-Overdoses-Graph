@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celebrity–Drug Network</title>
+  <link rel="stylesheet" href="https://unpkg.com/vis-network/styles/vis-network.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header>
+    <h1>🕸️ Celebrity–Drug Network</h1>
+    <p class="subtitle">
+      Grafowa sieć celebrytów, substancji i ich relacji — dane z Wikidata, baza Neo4j.
+    </p>
+    <div id="stats" class="stats"></div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Sterowanie</h2>
+
+      <div class="control-block">
+        <h3>🔗 Najkrótsza ścieżka</h3>
+        <label>Od:
+          <select id="path-from"></select>
+        </label>
+        <label>Do:
+          <select id="path-to"></select>
+        </label>
+        <button id="btn-path">Znajdź ścieżkę</button>
+        <div id="path-result" class="result"></div>
+      </div>
+
+      <div class="control-block">
+        <h3>☠️ Najgroźniejsze substancje</h3>
+        <button id="btn-dangerous">Pokaż ranking</button>
+        <div id="dangerous-result" class="result"></div>
+      </div>
+
+      <div class="control-block">
+        <button id="btn-full" class="secondary">Pokaż cały graf</button>
+      </div>
+    </section>
+
+    <section class="viz">
+      <h2>Wizualizacja</h2>
+      <div id="legend" class="legend">
+        <span class="dot celeb"></span> Celebryta
+        <span class="dot substance"></span> Przyczyna śmierci (◆ substancja)
+      </div>
+      <div id="network"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projekt zaliczeniowy — bazy danych grafowych (Neo4j). Dane: Wikidata.</p>
+  </footer>
+
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

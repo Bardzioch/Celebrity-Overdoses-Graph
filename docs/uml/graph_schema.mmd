@@ -1,0 +1,14 @@
+flowchart LR
+    C1(["Celebrity<br/>id, name,<br/>birth_year, death_year"])
+    C2(["Celebrity"])
+    S(["Cause / przyczyna śmierci<br/>id, name, category, is_drug"])
+
+    C1 -- "DIED_FROM" --> S
+    C1 -- "SPOUSE" --> C2
+    C1 -- "PARTNER" --> C2
+    C1 -- "RELATIVE" --> C2
+
+    classDef celeb fill:#ff5470,stroke:#c0314c,color:#fff;
+    classDef subs fill:#4ea8de,stroke:#2f73a0,color:#fff;
+    class C1,C2 celeb;
+    class S subs;

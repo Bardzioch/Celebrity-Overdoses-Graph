@@ -1,0 +1,23 @@
+flowchart LR
+    subgraph Klient["💻 Klient"]
+        B["Przeglądarka<br/>(index.html + app.js + vis-network)"]
+    end
+
+    subgraph Serwer["🖥️ Serwer aplikacji (Python)"]
+        F["Flask – app.py<br/>REST API"]
+        S["CelebrityService"]
+        D["Neo4jConnection"]
+        F --> S --> D
+    end
+
+    subgraph Docker["🐳 Kontener Docker"]
+        N[("Neo4j 5<br/>baza grafowa")]
+    end
+
+    subgraph Ext["🌍 Wikidata (źródło danych, offline)"]
+        W["MediaWiki API / WDQS SPARQL"]
+    end
+
+    B -- "HTTP / JSON" --> F
+    D -- "Bolt :7687" --> N
+    W -. "extract_data.py (CSV)" .-> N

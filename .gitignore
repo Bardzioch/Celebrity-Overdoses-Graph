@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Środowisko
+.env
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dane (CSV są celowo wersjonowane – patrz data/.gitkeep)
+# (nic tu nie ignorujemy, pliki CSV w data/ mają działać offline)
