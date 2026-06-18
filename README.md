@@ -7,7 +7,6 @@ społecznych. **Wszystkie dane pochodzą automatycznie z Wikidata.**
 Funkcjonalności:
 - 📋 lista celebrytów i substancji,
 - ☠️ ranking „najgroźniejszych” substancji (wg liczby zgonów),
-- 🧍 ego-sieć wokół wybranej osoby (promień 1 lub 2),
 - 🔗 najkrótsza ścieżka między dwoma celebrytami (np. *Elvis Presley → Lisa Marie
   Presley → Michael Jackson*),
 - 🌐 wizualizacja całego grafu (biblioteka `vis-network`).
@@ -108,7 +107,6 @@ bazy_projekt2/
 | GET | `/api/celebrities` | lista celebrytów |
 | GET | `/api/causes` | lista przyczyn śmierci (z flagą `is_drug`) |
 | GET | `/api/dangerous` | ranking substancji (tylko `is_drug`) wg liczby zgonów |
-| GET | `/api/network/<id>?depth=1\|2` | ego-sieć wokół celebryty |
 | GET | `/api/path?from=<id>&to=<id>` | najkrótsza ścieżka |
 | GET | `/api/graph` | cały graf (wizualizacja) |
 | GET | `/api/stats` | statystyki grafu |
