@@ -255,7 +255,3 @@ Szczegóły: [`../README.md`](../README.md).
 
 ---
 
-## 10. Możliwe rozszerzenia
-- Dodanie relacji współpracy zawodowej (wspólny zespół `P463`, wspólny film).
-- Algorytmy grafowe z biblioteki **Neo4j GDS** (centralność, wykrywanie społeczności).
-- Filtrowanie ścieżek po typie relacji (tylko społeczne / tylko przez substancje).
