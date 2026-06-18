@@ -101,7 +101,7 @@ flowchart LR
 Skrypt korzysta z dwóch punktów dostępu Wikidata:
 
 1. **MediaWiki API** (`/w/api.php`) — stabilny, służy do *wzbogacenia* każdej
-   osoby: rok urodzenia/śmierci (`P569`/`P570`), przyczyna śmierci (`P509`),
+   osoby: przyczyna śmierci (`P509`),
    relacje społeczne (`P26`, `P451`, `P3373`, `P40`, `P22`, `P25`).
 2. **WDQS (SPARQL)** — opcjonalnie (`--discover`) do automatycznego *odkrycia*
    listy osób zmarłych wskutek przedawkowania.
