@@ -47,53 +47,7 @@ Bolt. Dane są wcześniej pobierane z Wikidata do plików CSV i importowane do N
 
 ---
 
-## 3. Diagram klas
-
-```mermaid
-classDiagram
-    class FlaskApp {
-        +index()
-        +api_celebrities()
-        +api_substances()
-        +api_dangerous()
-        +api_network(id)
-        +api_path()
-        +api_graph()
-        +api_stats()
-    }
-    class CelebrityService {
-        -conn : Neo4jConnection
-        +get_celebrities() list
-        +get_causes() list
-        +dangerous_substances() list
-        +ego_network(id, depth) dict
-        +find_path(from_id, to_id) dict
-        +full_graph() dict
-        +stats() dict
-    }
-    class Neo4jConnection {
-        -uri : str
-        -user : str
-        -password : str
-        +query(cypher, params) list
-        +verify() void
-        +close() void
-    }
-    class queries {
-        <<module>>
-        +CONSTRAINTS
-        +GET_CELEBRITIES
-        +GET_CAUSES
-        +DANGEROUS_SUBSTANCES
-        +NETWORK_TEMPLATE
-        +SHORTEST_PATH
-        +FULL_GRAPH
-    }
-    FlaskApp --> CelebrityService : używa
-    CelebrityService --> Neo4jConnection : deleguje zapytania
-    CelebrityService ..> queries : korzysta z Cypher
-    Neo4jConnection ..> queries : wykonuje
-```
+## 3. Moduły
 
 | Moduł | Odpowiedzialność |
 |-------|------------------|
