@@ -163,11 +163,6 @@ dlatego graf jest rozszerzany o 1 skok przez `P26`/`P451`. Dzięki temu powstaj�
 ciekawe ścieżki, np. *Elvis Presley → córka Lisa Marie Presley → mąż Michael
 Jackson*.
 
-> ⚠️ **Korekta względem pierwotnych założeń (CLAUDE.md):** substancja nie jest
-> przechowywana w `P1196` (to „sposób śmierci”: wypadek/samobójstwo), lecz
-> w `P509` (przyczyna śmierci). Poprawny QID „drug overdose” to **Q3505252**
-> (Q3505294 oznacza „wetted area”).
-
 Skrypt zapisuje cztery pliki CSV: `celebrities.csv`, `causes.csv`,
 `died_from.csv`, `social.csv`.
 
@@ -241,11 +236,6 @@ MATCH p = shortestPath((a)-[*..10]-(b))
 RETURN [n IN nodes(p) | n.name] AS sciezka;
 ```
 
-**Ego-sieć (promień 2) wokół Amy Winehouse:**
-```cypher
-MATCH p = (c:Celebrity {id:'Q15897'})-[*1..2]-(m)
-RETURN p;
-```
 
 **Wizualizacja schematu w Neo4j Browser:**
 ```cypher
